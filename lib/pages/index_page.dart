@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provide/provide.dart';
 import 'package:xiangqu/provide/index_provide.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import './home_page.dart';
 import './designer_page.dart';
 import './shopping_page.dart';
@@ -50,8 +51,9 @@ class IndexPath extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   //初始化screenUtil
+   ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
 
-    
     return Provide<IndexProvide>(
       builder: (BuildContext context, Widget child, IndexProvide indexProvide) {
         return Scaffold(

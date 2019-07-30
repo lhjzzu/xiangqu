@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import './pages/index_page.dart';
 import './provide/index_provide.dart';
+import './provide/swiper_index_provide.dart';
 import 'package:provide/provide.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
 
   var providers = Providers();
-
   providers
-  ..provide(Provider.function((context) => IndexProvide()));
+  ..provide(Provider.function((context) => IndexProvide()))
+  ..provide(Provider.function((context) => SwiperIndexProvide()));
  runApp(ProviderNode(
    providers: providers,
    child: MyApp(),
