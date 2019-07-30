@@ -7,25 +7,6 @@ import './shopping_page.dart';
 import './mine_page.dart';
 
 class IndexPath extends StatelessWidget {
-  // final items = [
-  //   BottomNavigationBarItem(
-  //     icon: Image.asset("images/2.0x/icn_guang_highlight.png", fit: BoxFit.cover, width: 25,height: 25,),
-  //     title: Text("专题"),
-  //   ),
-  //   BottomNavigationBarItem(
-  //     icon:  Icon(Icons.home),
-  //     title: Text("设计师"),
-  //   ),
-  //   BottomNavigationBarItem(
-  //     icon: Icon(Icons.home),
-  //     title: Text("逛"),
-  //   ),
-  //   BottomNavigationBarItem(
-  //     icon: Icon(Icons.home),
-  //     title: Text("我的"),
-  //   ),
-  // ];
-
   final pages = [
     HomePage(),
     DesignerPage(),
@@ -61,9 +42,9 @@ class IndexPath extends StatelessWidget {
                   ),
                   width: 25,
                   height: 25,
-                ),
-                title: Text(title),
-              );
+          ),
+         title: Text(title),
+      );
   }
 
 
