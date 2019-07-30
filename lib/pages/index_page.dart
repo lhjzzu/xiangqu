@@ -39,9 +39,6 @@ class IndexPath extends StatelessWidget {
     return Provide<IndexProvide>(
       builder: (BuildContext context, Widget child, IndexProvide indexProvide) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text('想去'),
-          ),
           body: IndexedStack(
             children: pages,
             index: indexProvide.currentIndex,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../network/network.dart';
+import '../model/theme_model.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
 
@@ -7,14 +8,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     getTopics();
     return Scaffold(
+      appBar: AppBar(
+        title: Text('想去'),
+      ),
       body: Center(
         child: Text('HomePage'),
       ),
     );
   }
 
-  getTopics() {
+  getTopics()  async {
     print("开始网路请求");
-    Network.topics();
+    var result =  await  Network.topics();
+    if (result["data"] != null) {
+      var  listModel = ThemeListModel.fromJson(result);
+      print("listModel ${listModel.toJson()}");
+    }
   }
 }
