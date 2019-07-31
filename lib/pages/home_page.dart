@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:provide/provide.dart';
 import '../network/network.dart';
@@ -6,8 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../provide/home_provide.dart';
 import './home_page/home_title.dart';
 import './home_page/home_swiper.dart';
+import '../routers/application.dart';
+import 'dart:core';
 class HomePage extends StatelessWidget {
-  
+
   HomePage({Key key}) : super(key: key);
 
   @override
@@ -27,8 +32,16 @@ class HomePage extends StatelessWidget {
                 builder: (context, child, homeProvide) {
                   return HomeSwiper(
                     onTap: (index) {
-                      var image = homeProvide.list[index].image;
-                      print("image" + image);
+                      var model = homeProvide.list[index];
+                      print("image" + model.image);
+                      var url = model.url;
+                      //暂时用百度替代加载
+                      url = "https://www.baidu.com";
+                      if (url == null || url.length == 0) {
+                        return;
+                      }
+                      var route = "/webview?url=" + Uri.encodeComponent(("$url"));
+                      Application.router.navigateTo(context, route, transition:TransitionType.native);
                     },
                   );
                 },
