@@ -32,7 +32,7 @@ class Network {
         var response = await dio.post(URL.getUrl(path), data: data);
         responseData = response.data;
       }
-      print("responseData" + responseData.toString());
+      // print("responseData" + responseData.toString());
       if ((responseData is Map) &&
         responseData["code"] == 200 &&
         responseData["data"] != null) {
@@ -59,13 +59,13 @@ class Network {
       result["error"] = err.message;
       result["code"] = (err.response as Response).statusCode;
     }
-    print("result $result");
+    // print("result $result");
     return result;
   }
 
 
   /**
-   *  主题
+   *  专题
    */
   static Future<Map<String, dynamic>> topics() async {
     var formData = {

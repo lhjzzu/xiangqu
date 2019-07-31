@@ -56,6 +56,7 @@ flutter:
    - images/icn_designer_highlight.png
    - images/icn_guang_highlight.png
    - images/icn_mycenter_highlight.png
+   - images/topic_default_image.png
 
    - images/2.0x/icn_zhuanti.png
    - images/2.0x/icn_designer.png

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class HomeAppBar extends StatefulWidget implements  PreferredSizeWidget{
 
   final Widget child;
