@@ -20,27 +20,21 @@ class IndexPath extends StatelessWidget {
     var normalImageName = "";
     var selectedImageName = "";
     if (index == 0) {
-      normalImageName = "images/icn_zhuanti.png";
-      selectedImageName = "images/icn_zhuanti_highlight.png";
+      normalImageName = "assets/images/icn_zhuanti.png";
+      selectedImageName = "assets/images/icn_zhuanti_highlight.png";
     } else if (index == 1) {
-      normalImageName = "images/icn_designer.png";
-      selectedImageName = "images/icn_designer_highlight.png";
+      normalImageName = "assets/images/icn_designer.png";
+      selectedImageName = "assets/images/icn_designer_highlight.png";
     } else if (index == 2) {
-      normalImageName = "images/icn_guang.png";
-      selectedImageName = "images/icn_guang_highlight.png";
+      normalImageName = "assets/images/icn_guang.png";
+      selectedImageName = "assets/images/icn_guang_highlight.png";
     } else if (index == 3) {
-      normalImageName = "images/icn_mycenter.png";
-      selectedImageName = "images/icn_mycenter_highlight.png";
+      normalImageName = "assets/images/icn_mycenter.png";
+      selectedImageName = "assets/images/icn_mycenter_highlight.png";
     } 
     return BottomNavigationBarItem(
                 icon: Container(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image:  AssetImage(currentIndex != index ? normalImageName:selectedImageName),
-                      )
-                    ),
-                  ),
+                  child: Image.asset(currentIndex != index ? normalImageName:selectedImageName),
                   width: 25,
                   height: 25,
           ),

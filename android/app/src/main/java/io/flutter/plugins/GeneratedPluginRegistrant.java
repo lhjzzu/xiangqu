@@ -1,6 +1,7 @@
 package io.flutter.plugins;
 
 import io.flutter.plugin.common.PluginRegistry;
+import com.flutter_webview_plugin.FlutterWebviewPlugin;
 import io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin;
 import io.flutter.plugins.pathprovider.PathProviderPlugin;
 import com.tekartik.sqflite.SqflitePlugin;
@@ -13,6 +14,7 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
+    FlutterWebviewPlugin.registerWith(registry.registrarFor("com.flutter_webview_plugin.FlutterWebviewPlugin"));
     FluttertoastPlugin.registerWith(registry.registrarFor("io.github.ponnamkarthik.toast.fluttertoast.FluttertoastPlugin"));
     PathProviderPlugin.registerWith(registry.registrarFor("io.flutter.plugins.pathprovider.PathProviderPlugin"));
     SqflitePlugin.registerWith(registry.registrarFor("com.tekartik.sqflite.SqflitePlugin"));

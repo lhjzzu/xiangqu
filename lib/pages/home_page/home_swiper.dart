@@ -45,7 +45,6 @@ class HomeSwiper extends StatelessWidget {
           viewportFraction: 0.8,
           loop: false,
           autoplay: false,
-          autoplayDelay: 3000,
           itemBuilder: (context, index) {
             return _itemBuilder(context, index);
           },
@@ -67,7 +66,7 @@ class HomeSwiper extends StatelessWidget {
           fit: BoxFit.cover,
           placeholder: (context, url) {
              return Center(
-               child: Image.asset("images/topic_default_image.png", fit: BoxFit.cover,),
+               child: Image.asset("assets/images/topic_default_image.png", fit: BoxFit.cover,),
              );
           },
         ),

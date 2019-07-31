@@ -29,6 +29,9 @@ dependencies:
   cached_network_image: ^1.1.1
   flutter_screenutil: ^0.5.3
   flutter_swiper: ^1.1.6
+  flutter_webview_plugin: ^0.3.5
+  fluro: ^1.5.1
+
 
 dev_dependencies:
   flutter_test:
@@ -44,37 +47,19 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  uses-material-design: false
 
   # To add assets to your application, add an assets section, like this:
   assets:
-   - images/icn_zhuanti.png
-   - images/icn_designer.png
-   - images/icn_guang.png
-   - images/icn_mycenter.png
-   - images/icn_zhuanti_highlight.png
-   - images/icn_designer_highlight.png
-   - images/icn_guang_highlight.png
-   - images/icn_mycenter_highlight.png
-   - images/topic_default_image.png
-
-   - images/2.0x/icn_zhuanti.png
-   - images/2.0x/icn_designer.png
-   - images/2.0x/icn_guang.png
-   - images/2.0x/icn_mycenter.png
-   - images/2.0x/icn_zhuanti_highlight.png
-   - images/2.0x/icn_designer_highlight.png
-   - images/2.0x/icn_guang_highlight.png
-   - images/2.0x/icn_mycenter_highlight.png
-
-   - images/3.0x/icn_zhuanti.png
-   - images/3.0x/icn_designer.png
-   - images/3.0x/icn_guang.png
-   - images/3.0x/icn_mycenter.png
-   - images/3.0x/icn_zhuanti_highlight.png
-   - images/3.0x/icn_designer_highlight.png
-   - images/3.0x/icn_guang_highlight.png
-   - images/3.0x/icn_mycenter_highlight.png
+   - assets/images/icn_zhuanti.png
+   - assets/images/icn_designer.png
+   - assets/images/icn_guang.png
+   - assets/images/icn_mycenter.png
+   - assets/images/icn_zhuanti_highlight.png
+   - assets/images/icn_designer_highlight.png
+   - assets/images/icn_guang_highlight.png
+   - assets/images/icn_mycenter_highlight.png
+   - assets/images/topic_default_image.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
