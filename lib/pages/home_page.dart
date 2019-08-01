@@ -22,8 +22,8 @@ class HomePage extends StatelessWidget {
       appBar: HomeTitle.builder(),
       body: Container(
         padding: EdgeInsets.only(
-            top: ScreenUtil().setHeight(30),
-            bottom: ScreenUtil().setHeight(70)),
+            top: ScreenUtil().setHeight(15),
+            bottom: ScreenUtil().setHeight(35)),
         child: FutureBuilder(
           future: getTopics(context),
           builder: (context, snapshot) {

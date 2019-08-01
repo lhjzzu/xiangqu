@@ -46,7 +46,7 @@ class IndexPath extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    //初始化screenUtil
-   ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
+   ScreenUtil.instance = ScreenUtil(width: 375, height: 667)..init(context);
 
     return Provide<IndexProvide>(
       builder: (BuildContext context, Widget child, IndexProvide indexProvide) {

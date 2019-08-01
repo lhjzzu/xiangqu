@@ -60,6 +60,18 @@ flutter:
    - assets/images/icn_guang_highlight.png
    - assets/images/icn_mycenter_highlight.png
    - assets/images/topic_default_image.png
+   - assets/images/user_img_bg.png
+   - assets/images/icn_msg_white.png
+   - assets/images/icn_cart_small.png
+   - assets/images/icn_coupon_small.png
+   - assets/images/icn_fav_small.png
+   - assets/images/icn_order_small.png
+   - assets/images/icn_settle_small.png
+
+   - assets/images/icn_feedback.png
+   - assets/images/icn_list_arrow.png
+   - assets/images/icn_new_help.png
+   - assets/images/icn_settings.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

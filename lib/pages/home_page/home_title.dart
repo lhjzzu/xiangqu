@@ -10,7 +10,7 @@ class HomeTitle {
     return Container(
       margin: EdgeInsets.only(right: 10),
       height: 1.0,
-      width: ScreenUtil().setWidth(200.0),
+      width: ScreenUtil().setWidth(100.0),
       decoration: new BoxDecoration(
         gradient: const LinearGradient(colors: [
           Color.fromARGB(255, 237, 237, 237),
@@ -24,7 +24,7 @@ class HomeTitle {
     return Container(
       margin: EdgeInsets.only(left: 10),
       height: 1.0,
-      width: ScreenUtil().setWidth(200.0),
+      width: ScreenUtil().setWidth(100.0),
       decoration: new BoxDecoration(
         gradient: const LinearGradient(colors: [
           Color.fromARGB(255, 222, 222, 222),
