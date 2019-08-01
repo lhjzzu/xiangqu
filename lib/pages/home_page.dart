@@ -9,8 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../provide/home_provide.dart';
 import './home_page/home_title.dart';
 import './home_page/home_swiper.dart';
-import '../routers/application.dart';
 import 'dart:core';
+import '../routers/routes.dart';
 class HomePage extends StatelessWidget {
 
   HomePage({Key key}) : super(key: key);
@@ -35,13 +35,12 @@ class HomePage extends StatelessWidget {
                       var model = homeProvide.list[index];
                       print("image" + model.image);
                       var url = model.url;
-                      //暂时用百度替代加载
-                      url = "https://www.baidu.com";
                       if (url == null || url.length == 0) {
                         return;
                       }
-                      var route = "/webview?url=" + Uri.encodeComponent(("$url"));
-                      Application.router.navigateTo(context, route, transition:TransitionType.native);
+                      //暂时用百度替代链接
+                      url = "https://www.baidu.com";
+                      Routes.navigateTo(context, Routes.webview, {"url":url}, transition:TransitionType.native );
                     },
                   );
                 },

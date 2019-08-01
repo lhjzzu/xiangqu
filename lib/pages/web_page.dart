@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
-import '../routers/application.dart';
+import '../routers/routes.dart';
 class WebPage extends StatelessWidget {
   final  url;
   WebPage({Key key, this.url}) : super(key: key);
@@ -17,7 +16,7 @@ class WebPage extends StatelessWidget {
           child: IconButton(
               icon:Icon(Icons.arrow_back),
               onPressed: (){
-                Application.router.pop(context);
+                Routes.pop(context);
               },
          )
         ),

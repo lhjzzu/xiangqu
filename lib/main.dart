@@ -4,8 +4,6 @@ import './provide/index_provide.dart';
 import './provide/swiper_index_provide.dart';
 import './provide/home_provide.dart';
 import 'package:provide/provide.dart';
-import './routers/application.dart';
-import './routers/route_handlers.dart';
 import './routers/routes.dart';
 import 'package:fluro/fluro.dart';
 
@@ -25,10 +23,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
+
     final router = Router();
     Routes.configureRoutes(router);
-    Application.router = router;
 
     return MaterialApp(
       title: '想去',
