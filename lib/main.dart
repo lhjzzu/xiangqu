@@ -14,6 +14,9 @@ void main() {
     ..provide(Provider.function((context) => HomeProvide()))
     ..provide(Provider.function((context) => SwiperIndexProvide()));
 
+  final router = Router();
+  Routes.configureRoutes(router);
+
   runApp(ProviderNode(
     providers: providers,
     child: MyApp(),
@@ -24,8 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final router = Router();
-    Routes.configureRoutes(router);
+
 
     return MaterialApp(
       title: '想去',

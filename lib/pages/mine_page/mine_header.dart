@@ -13,7 +13,6 @@ class MineHeader extends StatelessWidget {
     return Container(
       height: ScreenUtil().setHeight(280),
       decoration: BoxDecoration(
-        color: Colors.green,
         image: DecorationImage(
             image: AssetImage("assets/images/user_img_bg.png"),
             fit: BoxFit.cover),
@@ -45,7 +44,6 @@ class MineHeader extends StatelessWidget {
   Widget _loginOrRegister() {
     return Positioned(
       child: Container(
-        // color: Colors.white,
         child: Column(
           children: <Widget>[
             Text(
@@ -55,7 +53,7 @@ class MineHeader extends StatelessWidget {
             ),
             SizedBox(height: 15),
             Container(
-              padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+              padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
               child: InkWell(
                 onTap: () {
                   if (this.onTap != null) {
@@ -79,10 +77,10 @@ class MineHeader extends StatelessWidget {
           ],
         ),
       ),
-      top: ScreenUtil().setHeight(100),
+      top: ScreenUtil().setHeight(90),
       left: 0,
       right: 0,
-      height: ScreenUtil().setHeight(80),
+      height: ScreenUtil().setHeight(100),
     );
   }
 

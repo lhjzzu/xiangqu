@@ -15,6 +15,7 @@ class MineBottom extends StatelessWidget {
       return Column(
         children: <Widget>[
           Container(
+              alignment: Alignment.center,
               height: ScreenUtil().setHeight(43),
               child: ListTile(
                 leading: Image.asset(item["icon"]),
