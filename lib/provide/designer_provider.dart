@@ -5,6 +5,7 @@ import 'package:xiangqu/model/deginer_category_model.dart';
 class DesignerProvide with ChangeNotifier {
   RecommendDesignerModel recommendModel;
   DesignerCategoryDataModel categoryDataModel;
+  int selectedIndex = 0;
 
   setRecommendModel(RecommendDesignerModel recommendModel) {
     this.recommendModel = recommendModel;
@@ -15,4 +16,10 @@ class DesignerProvide with ChangeNotifier {
     this.categoryDataModel = categoryDataModel;
     notifyListeners();
   }
+
+  setSelectedIndex(int index){
+    selectedIndex = index;
+    notifyListeners();
+  }
+
 }

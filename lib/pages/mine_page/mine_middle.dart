@@ -10,7 +10,6 @@ class MineMiddle extends StatelessWidget {
     {"title": "设计师入驻", "icon": "assets/images/icn_settle_small.png"},
   ];
   MineMiddle({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(

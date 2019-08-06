@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 typedef void DesignerSegmentOnTap(int index);
 class DesignerSegment extends StatefulWidget {
-  DesignerSegmentOnTap onTap;
+  final DesignerSegmentOnTap onTap;
   DesignerSegment({Key key, this.onTap}) : super(key: key);
 
   _DesignerSegmentState createState() => _DesignerSegmentState(this.onTap);
@@ -14,9 +14,6 @@ class _DesignerSegmentState extends State<DesignerSegment> {
   @override
   void initState() {
     super.initState();
-    if (this._onTap != null) {
-      this._onTap(selectedIndex);
-    }
   }
 
   @override
