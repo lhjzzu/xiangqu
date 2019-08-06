@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ import '../routers/routes.dart';
 class HomePage extends StatelessWidget {
 
   HomePage({Key key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     LinearGradient(colors: [Colors.amberAccent, Colors.lightBlue, Colors.red]);

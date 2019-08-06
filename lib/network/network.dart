@@ -7,8 +7,11 @@ import 'package:fluttertoast/fluttertoast.dart';
 class URL {
   static const baseUrl = "http://api.xiangqu.com/";
   static const topic = "ios/topic";
+  static const recommend_designer = "designer2/recommend/operate";
+  static const designer_category = "designer2/tag/index";
+
   static getUrl(String path) {
-    return baseUrl + topic;
+    return baseUrl + path;
   }
 }
 
@@ -57,14 +60,14 @@ class Network {
     } catch (err) {
       result["data"] = null;
       result["error"] = err.message;
-      result["code"] = (err.response as Response).statusCode;
+      result["code"] = err.response != null ? (err.response as Response).statusCode:-1000;
     }
     // print("result $result");
     return result;
   }
 
 
-  /**
+  /*
    *  专题
    */
   static Future<Map<String, dynamic>> topics() async {
@@ -73,5 +76,23 @@ class Network {
       "t": DateTime.now().millisecondsSinceEpoch
     };
     return await _request('post', URL.topic, data: formData);
+  }
+
+  /*
+   *  推荐设计师
+   */
+
+  static Future<Map<String, dynamic>> recommendDesigner() async {
+  
+    return await _request('post', URL.recommend_designer,data: {});
+  }
+
+   /*
+   *  设计的种类
+   */
+
+  static Future<Map<String, dynamic>> designerCategory() async {
+  
+    return await _request('post', URL.designer_category,data: {});
   }
 }

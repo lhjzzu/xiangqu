@@ -6,12 +6,13 @@ import './provide/home_provide.dart';
 import 'package:provide/provide.dart';
 import './routers/routes.dart';
 import 'package:fluro/fluro.dart';
-
+import 'package:xiangqu/provide/designer_provider.dart';
 void main() {
   final providers = Providers();
   providers
     ..provide(Provider.function((context) => IndexProvide()))
     ..provide(Provider.function((context) => HomeProvide()))
+    ..provide(Provider.function((context) => DesignerProvide()))
     ..provide(Provider.function((context) => SwiperIndexProvide()));
 
   final router = Router();

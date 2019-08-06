@@ -1,14 +1,75 @@
 import 'package:flutter/material.dart';
-
+import 'package:provide/provide.dart';
+import 'package:xiangqu/model/deginer_category_model.dart';
+import 'package:xiangqu/network/network.dart';
+import '../model/recommend_designer_model.dart';
+import '../provide/designer_provider.dart';
+import '../pages/designer_page/designer_header.dart';
+import '../pages/designer_page/designer_segment.dart';
 class DesignerPage extends StatelessWidget {
   const DesignerPage({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('DesignerPage'),
-      ),
-    );
+        body: FutureBuilder(
+      future: getdata(context),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return Provide<DesignerProvide>(builder: (context, child, provide) {
+            String tagstr = "";
+            String imageUrl;
+            String shopName;
+            String userNick;
+            String opTag;
+            if (provide.recommendModel != null) {
+              provide.recommendModel.tags.forEach((model) {
+                tagstr += model.name + " ";
+              });
+              imageUrl = provide.recommendModel.banner;
+              shopName = provide.recommendModel.shopName;
+              userNick = provide.recommendModel.userNick;
+              opTag = provide.recommendModel.opTag;
+            }
+            return Container(
+              color: Colors.white,
+              child: ListView(
+                children: <Widget>[
+                  DesignerHeader(
+                    imageUrl: imageUrl,
+                    shopName: shopName,
+                    userNick: userNick,
+                    opTag: opTag,
+                    tagstr: tagstr,
+                  ),
+                  DesignerSegment(
+                    onTap: (index){
+                      print("index = $index");
+                    },
+                  ),
+                ],
+              ),
+            );
+          });
+        } else {
+          return Center(
+            child: Text('加载中....'),
+          );
+        }
+      },
+    ));
+  }
+
+  Future getdata(BuildContext context) async {
+    var result = await Network.recommendDesigner();
+    if (result["data"] != null) {
+      var model = RecommendDesignerModel.fromJson(result["data"]);
+      Provide.value<DesignerProvide>(context).setRecommendModel(model);
+    }
+    var result2 = await Network.designerCategory();
+    if (result2["data"] != null) {
+      var model = DesignerCategoryDataModel.fromJson(result2);
+      Provide.value<DesignerProvide>(context).setCategoryDataModel(model);
+    }
+    return "end";
   }
 }
