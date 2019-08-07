@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import '../../utils/common_util.dart';
 class DesignerHeader extends StatelessWidget {
   final String imageUrl;
   final String shopName;
@@ -40,7 +40,7 @@ class DesignerHeader extends StatelessWidget {
       right: 0,
       top: 0,
       bottom: 0,
-      child: Image.network(imageUrl != null ? imageUrl : "", fit: BoxFit.cover),
+      child: Image.network(noNullValue(imageUrl, ""), fit: BoxFit.cover),
     );
   }
 
@@ -50,7 +50,7 @@ class DesignerHeader extends StatelessWidget {
       bottom: 15,
       child: Container(
         child: Text(
-          tagstr != null ? tagstr : "",
+          noNullValue(tagstr, ""),
           style: TextStyle(color: Colors.white, fontSize: 12),
         ),
       ),
@@ -63,7 +63,7 @@ class DesignerHeader extends StatelessWidget {
       bottom: 40,
       child: Container(
         child: Text(
-          this.opTag != null?this.opTag: "",
+          noNullValue(opTag, ""),
           style: TextStyle(color: Colors.white, fontSize: 14),
         ),
       ),
