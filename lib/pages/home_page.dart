@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    LinearGradient(colors: [Colors.amberAccent, Colors.lightBlue, Colors.red]);
+    // LinearGradient(colors: [Colors.amberAccent, Colors.lightBlue, Colors.red]);
     return Scaffold(
       appBar: HomeTitle.builder(),
       body: Container(

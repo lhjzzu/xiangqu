@@ -7,6 +7,7 @@ import './designer_page.dart';
 import './shopping_page.dart';
 import './mine_page.dart';
 
+
 class IndexPath extends StatelessWidget {
   final pages = [
     HomePage(),
@@ -33,12 +34,12 @@ class IndexPath extends StatelessWidget {
       selectedImageName = "assets/images/icn_mycenter_highlight.png";
     } 
     return BottomNavigationBarItem(
-                icon: Container(
+          icon: Container(
                   child: Image.asset(currentIndex != index ? normalImageName:selectedImageName),
                   width: 25,
                   height: 25,
-          ),
-         title: Text(title),
+                  ),
+          title: Text(title),
       );
   }
 

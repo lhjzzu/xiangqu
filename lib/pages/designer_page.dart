@@ -3,6 +3,7 @@ import 'package:provide/provide.dart';
 import 'package:xiangqu/model/deginer_category_model.dart';
 import 'package:xiangqu/network/network.dart';
 import 'package:xiangqu/pages/designer_page/designer_category.dart';
+import 'package:xiangqu/utils/common_util.dart';
 import '../model/recommend_designer_model.dart';
 import '../provide/designer_provider.dart';
 import '../pages/designer_page/designer_header.dart';
@@ -12,7 +13,7 @@ class DesignerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: FutureBuilder(
+     body: FutureBuilder(
       future: getdata(context),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
@@ -30,6 +31,13 @@ class DesignerPage extends StatelessWidget {
               shopName = provide.recommendModel.shopName;
               userNick = provide.recommendModel.userNick;
               opTag = provide.recommendModel.opTag;
+            }  
+            else {
+              imageUrl = "https://www.itying.com/images/flutter/3.png";
+              shopName = "这是木木的小店铺";
+              userNick = "小木木";
+              opTag = "TAG";
+              tagstr = "新鲜 美味 有趣";
             }
             return Container(
               color: Colors.white,

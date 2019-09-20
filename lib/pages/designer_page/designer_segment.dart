@@ -19,6 +19,7 @@ class _DesignerSegmentState extends State<DesignerSegment> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // color: Colors.green,
       padding: EdgeInsets.only(top: 10,bottom: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -54,6 +55,7 @@ class _DesignerSegmentState extends State<DesignerSegment> {
           border: Border(
             bottom: BorderSide(width: 2, color: index == selectedIndex?Color.fromARGB(255, 216, 182, 76): Colors.white )
           ),
+          // color: Colors.red
         ),
       ),
     );
