@@ -44,7 +44,7 @@ class HomeTitle {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _homeAppBarFirstLine(),
-              Text("专题", style: TextStyle(fontSize: 25)),
+              Text("专题2", style: TextStyle(fontSize: 25)),
               _homeAppBarSecondLine(),
             ],
           )),

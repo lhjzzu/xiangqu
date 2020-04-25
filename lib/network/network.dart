@@ -47,14 +47,14 @@ class Network {
         result["error"] = responseData["msg"];
         result["code"] = responseData["code"];
         if (result["error"] != null) {
-          // Fluttertoast.showToast(
-          //     msg: result["error"],
-          //     toastLength: Toast.LENGTH_SHORT,
-          //     gravity: ToastGravity.CENTER,
-          //     timeInSecForIos: 1,
-          //     backgroundColor: Colors.black,
-          //     textColor: Colors.white,
-          //     fontSize: 16.0);
+          Fluttertoast.showToast(
+              msg: result["error"],
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.CENTER,
+              timeInSecForIos: 1,
+              backgroundColor: Colors.black,
+              textColor: Colors.white,
+              fontSize: 16.0);
         }
       }
     } catch (err) {

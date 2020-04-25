@@ -8,6 +8,7 @@ import './routers/routes.dart';
 import 'package:fluro/fluro.dart';
 import 'package:xiangqu/provide/designer_provider.dart';
 void main() {
+  //Providers  google 
   final providers = Providers();
   providers
     ..provide(Provider.function((context) => IndexProvide()))

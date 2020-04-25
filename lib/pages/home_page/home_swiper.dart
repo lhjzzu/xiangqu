@@ -16,7 +16,7 @@ class HomeSwiper extends StatelessWidget {
    Widget _swiper(BuildContext context) {
     final _controller = new SwiperController();
     final _customLayoutOption =
-        new CustomLayoutOption(startIndex: -1, stateCount: 3)
+      new CustomLayoutOption(startIndex: -1, stateCount: 3)
             .addRotate([-25.0 / 180, 0.0, 25.0 / 180]).addTranslate([
       new Offset(-350.0, 0.0),
       new Offset(0.0, 0.0),

@@ -3,7 +3,6 @@ import 'package:provide/provide.dart';
 import 'package:xiangqu/model/deginer_category_model.dart';
 import 'package:xiangqu/network/network.dart';
 import 'package:xiangqu/pages/designer_page/designer_category.dart';
-import 'package:xiangqu/utils/common_util.dart';
 import '../model/recommend_designer_model.dart';
 import '../provide/designer_provider.dart';
 import '../pages/designer_page/designer_header.dart';

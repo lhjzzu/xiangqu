@@ -34,9 +34,9 @@ class HomePage extends StatelessWidget {
                       var model = homeProvide.list[index];
                       print("image" + model.image);
                       var url = model.url;
-                      if (url == null || url.length == 0) {
-                        return;
-                      }
+                      // if (url == null || url.length == 0) {
+                      //   return;
+                      // }
                       //暂时用百度替代链接
                       url = "https://www.baidu.com";
                       Routes.navigateTo(context, Routes.webview, {"url":url}, transition:TransitionType.native );
@@ -61,6 +61,6 @@ class HomePage extends StatelessWidget {
       var listModel = ThemeListModel.fromJson(result);
       Provide.value<HomeProvide>(context).setListModel(listModel.data);
     }
-    return "end";
+    return "";
   }
 }
